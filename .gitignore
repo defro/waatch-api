@@ -1,0 +1,10 @@
+# Application
+/.env
+/test.php
+
+# Composer
+/vendor
+/composer.phar
+
+# IDE
+/.idea
