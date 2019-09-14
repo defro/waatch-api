@@ -5,10 +5,12 @@
     "homepage": "https://github.com/defro/waatch-api",
     "keywords":
     [
+        "api",
         "waatch",
         "captainwatch",
         "movie",
         "tvseries",
+        "streaming-provider",
         "ia"
     ],
     "license": "MIT",
