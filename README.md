@@ -1,8 +1,7 @@
-# Waatch TV API
+# Waatch API
 
 [![Latest Version](https://img.shields.io/github/release/defro/waatch-api.svg?style=flat-square)](https://github.com/defro/waatch-api/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/5d86f539-e1f9-4eb1-9c70-907a68aa8e9b.svg?style=flat-square)](https://insight.sensiolabs.com/projects/5d86f539-e1f9-4eb1-9c70-907a68aa8e9b)
 [![Total Downloads](https://img.shields.io/packagist/dt/defro/waatch-api.svg?style=flat-square)](https://packagist.org/packages/defro/waatch-api)
 
 This package can get movie, tv series, streaming provider from [waatch.co](https://waatch.co). Here's a quick example:
@@ -12,7 +11,7 @@ $client = new \GuzzleHttp\Client();
 $waatch = new Defro\Waatch\Api($client);
 $images = $waatch
     ->setApiKey('YOUR_WAATCH_API_KEY')
-    ->getLanguage('fr') // The Movie DB ID of Saving Private Ryan
+    ->setLanguage('fr') // Language ISO
 ;
 ```
 
@@ -26,11 +25,11 @@ $movie = $waatch
 ;
 ```
 
-Add country to have providers of the movie.
+Set country ISO code to filter streaming providers of this country.
 
 ```php
 $movie = $waatch
-    ->setCountry('fr') // All streaming providers of France
+    ->setCountry('fr') // All streaming providers in France
     ->getMovie(374720) // The Movie DB ID of "Dunkirk"
 ;
 ```
